@@ -1,24 +1,26 @@
-import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import CampDetail from "./pages/CampDetail";
+import CampApply from "./pages/CampApply";
+import Community from "./pages/Community";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/CampDetail">CampDetail</Link>
+        <Link to="/CampApply">CampApply</Link>
+        <Link to="/Community">Community</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/CampDetail" element={<CampDetail />}></Route>
+        <Route path="/CampApply" element={<CampApply />}></Route>
+        <Route path="/Community" element={<Community />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
