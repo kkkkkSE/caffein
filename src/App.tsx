@@ -8,12 +8,12 @@ import Community from "./pages/Community";
 function App() {
   return (
     <Router>
-      <nav>
+      {/* <nav>
         <Link to="/">Home</Link>
         <Link to="/CampDetail">CampDetail</Link>
         <Link to="/CampApply">CampApply</Link>
         <Link to="/Community">Community</Link>
-      </nav>
+      </nav> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/CampDetail" element={<CampDetail />}></Route>
