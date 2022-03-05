@@ -1,20 +1,26 @@
 // eslint-disable-next-line
 import styled from "styled-components";
+import CommunityCard from "../../../components/CommunityCard";
 
 const Community = () => {
   return (
     <Container>
-      <div className="wrap"></div>
+      <div className="communitySection">
+        <CommunityCard />
+        <CommunityCard />
+        <CommunityCard />
+        <CommunityCard />
+      </div>
     </Container>
   );
 };
 
 const Container = styled.div`
-  .wrap {
+  .communitySection {
     width: 960px;
-    height: 80px;
     margin: 0 auto;
-    background-color: #ffd;
+    display: flex;
+    justify-content: space-between;
   }
 `;
 

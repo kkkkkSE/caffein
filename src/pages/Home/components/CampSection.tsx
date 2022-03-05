@@ -1,20 +1,50 @@
 // eslint-disable-next-line
 import styled from "styled-components";
+import Card from "../../../components/CampCard";
 
 const CampSection = () => {
   return (
     <Container>
-      <div className="wrap"></div>
+      <section className="campSection">
+        <h2 className="campSectionTitle">캠프타입 받고 타이틀 설정</h2>
+        <div className="cardWrap">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+      </section>
+      <section className="campSection">
+        <h2 className="campSectionTitle">캠프타입 받고 타이틀 설정</h2>
+        <div className="cardWrap">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+      </section>
     </Container>
   );
 };
 
 const Container = styled.div`
-  .wrap {
+  padding-top: 4rem;
+
+  .campSection {
     width: 960px;
-    height: 80px;
     margin: 0 auto;
-    background-color: #faf;
+    padding-bottom: 3rem;
+  }
+  .campSection:last-child {
+    padding-bottom: 0;
+  }
+
+  .campSectionTitle {
+    margin: 0 0 10px;
+  }
+  .cardWrap {
+    display: flex;
+    justify-content: space-between;
   }
 `;
 
