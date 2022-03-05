@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
+
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import MainBanner from "./components/MainBanner";
@@ -11,11 +11,12 @@ function Home() {
   return (
     <div>
       <Header />
-      <MainBanner />
-      <CampSection />
-      <CampSection />
-      <SubBanner />
-      <Community />
+      <div className="homeContWrap" style={{ paddingBottom: "242px" }}>
+        <MainBanner />
+        <CampSection />
+        <SubBanner />
+        <Community />
+      </div>
       <Footer />
     </div>
   );
