@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import styled from "styled-components";
-import CommunityCard from "../../../components/CommunityCard";
+import CommunityCard from "./CommunityCard";
 
 const Community = () => {
   return (

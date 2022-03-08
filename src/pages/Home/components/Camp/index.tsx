@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import styled from "styled-components";
-import Card from "../../../components/CampCard";
+import Card from "./CampCard";
 
 const CampSection = () => {
   return (
