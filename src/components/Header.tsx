@@ -1,13 +1,18 @@
 // eslint-disable-next-line
 import styled from "styled-components";
+import { maxWidth } from "../styles/mixin";
 import colors from "../styles/color";
+import typo from "../styles/typo";
+import myPageIcon from "../assets/image/icons/my-page-icon.svg";
 
 const Header = () => {
   return (
     <Container>
       <div className="headerWrap">
-        <span className="logo">로고</span>
-        <div className="myPage"></div>
+        <h2 className="logo">caffein</h2>
+        <div className="myPage">
+          <img src={myPageIcon} alt="마이페이지 이동" />
+        </div>
       </div>
     </Container>
   );
@@ -19,24 +24,26 @@ const Container = styled.div`
   left: 0;
   color: ${colors.White};
   width: 100%;
+  height: 60px;
+
+  h2 {
+    ${typo.H2}
+  }
 
   .headerWrap {
-    box-sizing: border-box;
-    width: 960px;
-    height: 60px;
-    margin: 0 auto;
+    ${maxWidth}
+    height: 100%;
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .logo {
+    font-family: "Roboto Slab", serif;
+    cursor: pointer;
   }
   .myPage {
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 50%;
+    cursor: pointer;
   }
 `;
 export default Header;
