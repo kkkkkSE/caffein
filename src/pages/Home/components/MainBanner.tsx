@@ -1,5 +1,8 @@
 import styled from "styled-components";
+import { maxWidth } from "../../../styles/mixin";
 import colors from "../../../styles/color";
+
+import bannerImage from "../../../assets/image/banner-img.png";
 
 const MainBanner = () => {
   return (
@@ -12,12 +15,31 @@ const MainBanner = () => {
           </p>
           <div className="arrowPart">
             <div className="line"></div>
-            <div className="leftArrow arrow"></div>
-            <div className="rightArrow arrow"></div>
+            <div className="leftArrow arrow">
+              <img
+                src={
+                  require("../../../assets/image/icons/left-btn.svg").default
+                }
+                alt="배너 왼쪽으로 넘기기"
+              />
+            </div>
+            <div className="rightArrow arrow">
+              <img
+                src={
+                  require("../../../assets/image/icons/right-btn.svg").default
+                }
+                alt="배너 오른쪽으로 넘기기"
+              />
+            </div>
           </div>
         </div>
         <div className="rightPart">
-          <div className="bannerImage"></div>
+          <div
+            className="bannerImage"
+            style={{
+              backgroundImage: `url(${bannerImage})`,
+            }}
+          ></div>
         </div>
       </section>
     </Container>
@@ -25,13 +47,13 @@ const MainBanner = () => {
 };
 
 const Container = styled.div`
+  padding: 100px 0 60px;
+  background: ${colors.Primary03};
   color: ${colors.White};
-  background-color: ${colors.Primary01};
-  padding: 100px 0 60px 0;
 
   .mainBannerSection {
-    width: 960px;
-    margin: 0 auto;
+    ${maxWidth}
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
   }
@@ -45,7 +67,9 @@ const Container = styled.div`
     font-weight: bold;
     font-size: 48px;
     line-height: 56px;
+    padding-bottom: 20px;
   }
+
   .arrowPart {
     display: flex;
     align-items: center;
@@ -54,13 +78,9 @@ const Container = styled.div`
     width: 246px;
     height: 1px;
     background-color: ${colors.White};
-    margin-right: 10px;
   }
   .arrow {
-    width: 10px;
-    height: 20px;
-    background-color: ${colors.White};
-    margin: 0px 14px;
+    margin-left: 25px;
   }
 
   .rightPart {
@@ -70,7 +90,8 @@ const Container = styled.div`
   .bannerImage {
     width: 600px;
     height: 400px;
-    background-color: ${colors.White};
+    background-size: cover;
+    background-position: 50% 50%;
   }
 `;
 export default MainBanner;
