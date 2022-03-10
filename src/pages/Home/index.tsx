@@ -11,8 +11,8 @@ function Home() {
   return (
     <div>
       <Header />
-      <div className="homeContWrap" style={{ paddingBottom: "242px" }}>
-        <MainBanner />
+      <MainBanner />
+      <div style={{ padding: "64px 0 242px" }}>
         <Camp />
         <SubBanner />
         <Community />

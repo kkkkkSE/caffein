@@ -7,20 +7,22 @@ const CommunityCard = () => {
     <Card>
       <div className="communityCard">
         <div className="topPart">
-          <span className="postFeature postTag">글 특징</span>
+          <span className="topViewPost postTag">글 특징</span>
           <span className="postCategory postTag">글 카테고리</span>
           <p className="postTitle">커뮤니티에 작성한 글 제목이 나타납니다.</p>
           <p className="postCont">커뮤니티에 작성한 글의 내용이 나타납니다.</p>
         </div>
         <div className="bottomPart">
-          <div className="comment">
-            <div className="commentImg"></div>
-            <div className="commentNickname">멘토1342</div>
-          </div>
-          <div className="comment">
-            <div className="commentImg"></div>
-            <div className="commentNickname">멘토1342</div>
-          </div>
+          <ul>
+            <li className="comment">
+              <div className="commentAvatar"></div>
+              <div className="commentNickname">멘토1342</div>
+            </li>
+            <li className="comment">
+              <div className="commentAvatar"></div>
+              <div className="commentNickname">멘토1342</div>
+            </li>
+          </ul>
           <a href="#" className="moreBtn">
             ＋더보기
           </a>
@@ -31,12 +33,11 @@ const CommunityCard = () => {
 };
 
 const Card = styled.div`
-  box-sizing: border-box;
-  padding: 16px;
   width: calc((100% - 60px) / 4);
   height: 320px;
-  border: 1px solid #cccccc;
-  box-sizing: border-box;
+  padding: 16px;
+  background-color: ${colors.White};
+  border: 1px solid ${colors.Gray04};
   border-radius: 10px;
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
 
@@ -49,14 +50,14 @@ const Card = styled.div`
 
   .postTag {
     display: inline-block;
-    ${typo.caption}
-    box-sizing: border-box;
-    border-radius: 4px;
     padding: 4px;
-    margin-right: 8px;
+    ${typo.caption}
     font-weight: bold;
+    border-radius: 4px;
+    margin: 0 8px 8px 0;
   }
-  .postFeature {
+
+  .topViewPost {
     background-color: ${colors.Primary01};
     color: ${colors.White};
   }
@@ -67,19 +68,26 @@ const Card = styled.div`
   .postTitle {
     ${typo.Body1}
     font-weight: bold;
+    padding-bottom: 10px;
   }
   .postCont {
     ${typo.Body2}
   }
 
-  .comment {
+  .bottomPart {
     display: flex;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  .comment:last-child {
-    margin-bottom: 0;
+  .bottomPart ul {
+    width: 100%;
   }
-  .commentImg {
+  .comment {
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+  }
+  .commentAvatar {
     width: 30px;
     height: 30px;
     background-color: ${colors.Gray05};
@@ -92,11 +100,8 @@ const Card = styled.div`
   }
 
   .moreBtn {
-    text-decoration: none;
     ${typo.caption}
     color: ${colors.Secondary01};
-    display: block;
-    text-align: center;
   }
 `;
 export default CommunityCard;

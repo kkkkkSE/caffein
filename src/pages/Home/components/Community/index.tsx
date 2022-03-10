@@ -1,5 +1,6 @@
 // eslint-disable-next-line
 import styled from "styled-components";
+import { maxWidth } from "../../../../styles/mixin";
 import CommunityCard from "./CommunityCard";
 
 const Community = () => {
@@ -17,9 +18,9 @@ const Community = () => {
 
 const Container = styled.div`
   .communitySection {
-    width: 960px;
-    margin: 0 auto;
+    ${maxWidth}
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 `;

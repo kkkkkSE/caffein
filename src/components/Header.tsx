@@ -33,7 +33,6 @@ const Container = styled.div`
   .headerWrap {
     ${maxWidth}
     height: 100%;
-    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;

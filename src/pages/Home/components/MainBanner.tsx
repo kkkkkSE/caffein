@@ -53,7 +53,6 @@ const Container = styled.div`
 
   .mainBannerSection {
     ${maxWidth}
-    padding: 0 10px;
     display: flex;
     justify-content: space-between;
   }

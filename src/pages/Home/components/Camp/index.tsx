@@ -1,5 +1,7 @@
 // eslint-disable-next-line
 import styled from "styled-components";
+import { maxWidth } from "../../../../styles/mixin";
+import typo from "../../../../styles/typo";
 import Card from "./CampCard";
 
 const CampSection = () => {
@@ -28,22 +30,25 @@ const CampSection = () => {
 };
 
 const Container = styled.div`
-  padding-top: 4rem;
+  h2 {
+    ${typo.H2}
+  }
 
   .campSection {
-    width: 960px;
-    margin: 0 auto;
-    padding-bottom: 3rem;
+    ${maxWidth}
+    padding-bottom: 50px;
   }
   .campSection:last-child {
     padding-bottom: 0;
   }
 
   .campSectionTitle {
-    margin: 0 0 10px;
+    padding-bottom: 15px;
   }
+
   .cardWrap {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 `;

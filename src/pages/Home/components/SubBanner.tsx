@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { maxWidth } from "../../../styles/mixin";
 import colors from "../../../styles/color";
 import typo from "../../../styles/typo";
 
@@ -15,21 +16,23 @@ const SubBanner = () => {
 };
 
 const Container = styled.div`
+  padding: 54px 0;
   color: ${colors.White};
+
   h2 {
     ${typo.H2}
   }
-  padding: 54px 0;
 
   .subBannerWrap {
-    width: 960px;
-    height: 100px;
-    margin: 0 auto;
-    background-color: ${colors.Primary01};
+    ${maxWidth}
     display: flex;
     align-items: center;
-    padding: 42px;
-    box-sizing: border-box;
+  }
+  .subBannerDesc {
+    width: 100%;
+    line-height: 100px;
+    background-color: ${colors.Primary01};
+    padding-left: 42px;
   }
 `;
 

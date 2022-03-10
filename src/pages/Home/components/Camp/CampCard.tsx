@@ -36,7 +36,6 @@ const Card = styled.div`
     bottom: 0;
     width: 100%;
     padding: 16px;
-    box-sizing: border-box;
     background: linear-gradient(
       180deg,
       rgba(39, 63, 40, 0) 0%,
@@ -51,6 +50,8 @@ const Card = styled.div`
   .campTitle {
     ${typo.Body1}
     font-weight: bold;
+    padding: 11px 0;
+    line-height: 1.2;
   }
   .startDate {
     ${typo.caption}
