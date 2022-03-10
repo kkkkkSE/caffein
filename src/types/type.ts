@@ -11,7 +11,8 @@ export interface caffeinCamp {
 
 export interface caffeinCommunity {
   id: number;
-  tags: string[];
+  topPost: boolean;
+  postCategory: string;
   title: string;
   content: string;
   comments: caffeinComment[];
