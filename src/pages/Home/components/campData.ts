@@ -1,4 +1,4 @@
-import { caffeinCamp, caffeinCommunity } from "../../../../types/type";
+import { caffeinCamp, caffeinCommunity } from "../../../types/type";
 
 export const campData: caffeinCamp[] = [
   {
