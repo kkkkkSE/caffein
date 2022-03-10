@@ -17,17 +17,13 @@ const MainBanner = () => {
             <div className="line"></div>
             <div className="leftArrow arrow">
               <img
-                src={
-                  require("../../../assets/image/icons/left-btn.svg").default
-                }
+                src="/assets/image/icons/left-btn.svg"
                 alt="배너 왼쪽으로 넘기기"
               />
             </div>
             <div className="rightArrow arrow">
               <img
-                src={
-                  require("../../../assets/image/icons/right-btn.svg").default
-                }
+                src={"/assets/image/icons/right-btn.svg"}
                 alt="배너 오른쪽으로 넘기기"
               />
             </div>
@@ -37,7 +33,7 @@ const MainBanner = () => {
           <div
             className="bannerImage"
             style={{
-              backgroundImage: `url(${bannerImage})`,
+              backgroundImage: `url("/assets/image/banner-img.png")`,
             }}
           ></div>
         </div>

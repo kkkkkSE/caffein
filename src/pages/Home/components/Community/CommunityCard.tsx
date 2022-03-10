@@ -2,25 +2,47 @@ import styled from "styled-components";
 import typo from "../../../../styles/typo";
 import colors from "../../../../styles/color";
 
-const CommunityCard = () => {
+import { caffeinCommunity } from "../../../../types/type";
+
+interface CommunityProps {
+  data: caffeinCommunity;
+}
+
+const CommunityCard = ({ data }: CommunityProps) => {
   return (
     <Card>
       <div className="communityCard">
         <div className="topPart">
-          <span className="topViewPost postTag">글 특징</span>
-          <span className="postCategory postTag">글 카테고리</span>
-          <p className="postTitle">커뮤니티에 작성한 글 제목이 나타납니다.</p>
-          <p className="postCont">커뮤니티에 작성한 글의 내용이 나타납니다.</p>
+          <span
+            className={`${
+              data.topPost ? "topViewPost postTag" : "topViewPost postTag hide"
+            }`}
+          >
+            조회수 TOP
+          </span>
+          <span className="postCategory postTag">{data.postCategory}</span>
+          <p className="postTitle">{data.title}</p>
+          <p className="postCont">{data.content}</p>
         </div>
         <div className="bottomPart">
           <ul>
             <li className="comment">
               <div className="commentAvatar"></div>
-              <div className="commentNickname">멘토1342</div>
+              <div className="commentTextPart">
+                <div className="commentNickname">
+                  {data.comments[0].nickname}
+                </div>
+                <div className="commentCont">{data.comments[0].content}</div>
+              </div>
             </li>
             <li className="comment">
               <div className="commentAvatar"></div>
-              <div className="commentNickname">멘토1342</div>
+              <div className="commentTextPart">
+                <div className="commentNickname">
+                  {data.comments[1].nickname}
+                </div>
+                <div className="commentCont">{data.comments[1].content}</div>
+              </div>
             </li>
           </ul>
           <a href="#" className="moreBtn">
@@ -56,6 +78,9 @@ const Card = styled.div`
     border-radius: 4px;
     margin: 0 8px 8px 0;
   }
+  .postTag.hide {
+    display: none;
+  }
 
   .topViewPost {
     background-color: ${colors.Primary01};
@@ -85,6 +110,7 @@ const Card = styled.div`
   .comment {
     width: 100%;
     display: flex;
+    align-items: center;
     padding-bottom: 20px;
   }
   .commentAvatar {
@@ -94,9 +120,14 @@ const Card = styled.div`
     border-radius: 50%;
     margin-right: 8px;
   }
+
   .commentNickname {
     ${typo.Body2}
     font-weight: bold;
+    padding-bottom: 6px;
+  }
+  .commentCont {
+    ${typo.caption}
   }
 
   .moreBtn {

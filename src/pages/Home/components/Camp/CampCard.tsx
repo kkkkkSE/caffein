@@ -1,15 +1,29 @@
+import dayjs from "dayjs";
 import styled from "styled-components";
 import typo from "../../../../styles/typo";
 import colors from "../../../../styles/color";
 
-const CampCard = () => {
+import { caffeinCamp } from "../../../../types/type";
+
+interface CampProps {
+  campData: caffeinCamp;
+}
+
+const CampCard = ({ campData }: CampProps) => {
   return (
     <Card>
-      <div className="bgImg">
+      <div
+        className="bgImg"
+        style={{
+          backgroundImage: `url(${campData.thumbnail})`,
+        }}
+      >
         <div className="textPart">
-          <span className="statusOrSkill">상태 또는 스킬</span>
-          <p className="campTitle">모집중인 캠프 이름이 들어갈 곳 입니다.</p>
-          <span className="startDate">0월 00일부터</span>
+          <span className="statusOrSkill">{campData.status}</span>
+          <p className="campTitle">{campData.name}</p>
+          <span className="startDate">
+            {dayjs(campData.startDate).format("M월 D일 시작")}
+          </span>
         </div>
       </div>
     </Card>
@@ -20,7 +34,6 @@ const Card = styled.div`
   width: calc((100% - 60px) / 4);
   height: 280px;
   color: ${colors.White};
-  background-color: ${colors.Gray06};
   border-radius: 10px;
 
   .bgImg {
