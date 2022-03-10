@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { maxWidth } from "../styles/mixin";
 import colors from "../styles/color";
 import typo from "../styles/typo";
-import myPageIcon from "../assets/image/icons/my-page-icon.svg";
 
 const Header = () => {
   return (
@@ -11,7 +10,10 @@ const Header = () => {
       <div className="headerWrap">
         <h2 className="logo">caffein</h2>
         <div className="myPage">
-          <img src={myPageIcon} alt="마이페이지 이동" />
+          <img
+            src="/assets/image/icons/my-page-icon.svg"
+            alt="마이페이지 이동"
+          />
         </div>
       </div>
     </Container>

@@ -4,10 +4,6 @@ import { maxWidth } from "../styles/mixin";
 import colors from "../styles/color";
 import typo from "../styles/typo";
 
-import twitterIcon from "../assets/image/icons/twitter-icon.svg";
-import facebookIcon from "../assets/image/icons/facebook-icon.svg";
-import instagramIcon from "../assets/image/icons/instagram-icon.svg";
-
 const Footer = () => {
   return (
     <Container>
@@ -27,13 +23,19 @@ const Footer = () => {
         </div>
         <div className="snsBtnWrap">
           <div className="snsBtn">
-            <img src={twitterIcon} alt="공식 트위터" />
+            <img src="/assets/image/icons/twitter-icon.svg" alt="공식 트위터" />
           </div>
           <div className="snsBtn">
-            <img src={facebookIcon} alt="공식 페이스북" />
+            <img
+              src="/assets/image/icons/facebook-icon.svg"
+              alt="공식 페이스북"
+            />
           </div>
           <div className="snsBtn">
-            <img src={instagramIcon} alt="공식 인스타그램" />
+            <img
+              src="/assets/image/icons/instagram-icon.svg"
+              alt="공식 인스타그램"
+            />
           </div>
         </div>
       </div>
