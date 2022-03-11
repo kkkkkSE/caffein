@@ -7,7 +7,7 @@ const SubBanner = () => {
   return (
     <Container>
       <div className="subBannerWrap">
-        <h2 className="subBannerDesc">
+        <h2 className="subBannerText">
           현직자와 소통하며 배우는 실무 스킬, 퍼스널 트레이닝
         </h2>
       </div>
@@ -28,11 +28,10 @@ const Container = styled.div`
     display: flex;
     align-items: center;
   }
-  .subBannerDesc {
+  .subBannerText {
     width: 100%;
-    line-height: 100px;
+    padding: 33px 42px;
     background-color: ${colors.Primary01};
-    padding-left: 42px;
   }
 `;
 
