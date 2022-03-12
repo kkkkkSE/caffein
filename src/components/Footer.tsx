@@ -112,6 +112,27 @@ const Container = styled.div`
   .snsBtn:nth-child(3) {
     background-color: #2d3748;
   }
+
+  @media (max-width: 567px) {
+    padding: 0;
+    .logo {
+      padding-bottom: 23px;
+    }
+    .footerWrap {
+      padding: 18px 28px;
+      position: relative;
+      flex-direction: column;
+    }
+    .siteInfoWrap {
+      width: 100%;
+    }
+    .snsBtnWrap {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: auto;
+    }
+  }
 `;
 
 export default Footer;

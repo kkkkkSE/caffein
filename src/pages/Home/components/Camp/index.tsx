@@ -49,9 +49,6 @@ const Container = styled.div`
     ${maxWidth}
     padding-bottom: 50px;
   }
-  .campSection:last-child {
-    padding-bottom: 0;
-  }
 
   .campSectionTitle {
     padding-bottom: 15px;
@@ -61,6 +58,11 @@ const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  @media (max-width: 567px) {
+  .campSection {
+    padding-bottom: 80px;
   }
 `;
 

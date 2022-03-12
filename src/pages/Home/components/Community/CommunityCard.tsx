@@ -134,5 +134,9 @@ const Card = styled.div`
     ${typo.caption}
     color: ${colors.Secondary01};
   }
+
+  @media (max-width: 960px) {
+    width: calc((100% - 40px) / 3);
+  }
 `;
 export default CommunityCard;

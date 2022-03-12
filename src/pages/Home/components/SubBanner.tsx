@@ -16,7 +16,7 @@ const SubBanner = () => {
 };
 
 const Container = styled.div`
-  padding: 54px 0;
+  padding-bottom: 54px;
   color: ${colors.White};
 
   h2 {
@@ -32,6 +32,21 @@ const Container = styled.div`
     width: 100%;
     padding: 33px 42px;
     background-color: ${colors.Primary01};
+    word-break: keep-all;
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 0;
+
+    .subBannerWrap {
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 567px) {
+    .subBannerText {
+      padding: 22px 16px;
+    }
   }
 `;
 

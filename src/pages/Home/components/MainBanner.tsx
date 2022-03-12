@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { maxWidth } from "../../../styles/mixin";
 import colors from "../../../styles/color";
+import typo from "../../../styles/typo";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
@@ -94,23 +95,24 @@ const StyledSwiper = styled(Swiper)`
     display: flex;
     justify-content: space-between;
   }
-  .bannerTitle {
-    display: flex;
-    align-items: flex-end;
 
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 56px;
-    padding-bottom: 50px;
-    white-space: pre-line;
+  @media (max-width: 960px) {
+    .swiper-button-prev {
+      left: 200px;
+    }
+    .swiper-button-next {
+      left: 235px;
+    }
   }
 
-  .bannerImage {
-    width: 600px;
-    height: 400px;
-    background-size: cover;
-    background-position: 50% 50%;
-    border-radius: 10px;
+  @media (max-width: 767px) {
+    .swiper-slide {
+      flex-direction: column;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
   }
 `;
 
@@ -134,6 +136,50 @@ const Container = styled.div`
     width: 246px;
     height: 1px;
     background-color: ${colors.White};
+  }
+
+  .bannerTitle {
+    display: flex;
+    align-items: flex-end;
+
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    padding-bottom: 50px;
+    white-space: pre-line;
+  }
+
+  .bannerImage {
+    width: 62.5%;
+    height: 400px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 960px) {
+    .line {
+      width: 180px;
+    }
+    .bannerImage {
+      width: 60%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .line {
+      display: none;
+    }
+    .bannerImage {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 567px) {
+    padding-bottom: 30px;
+    .bannerImage {
+      height: 200px;
+    }
   }
 `;
 

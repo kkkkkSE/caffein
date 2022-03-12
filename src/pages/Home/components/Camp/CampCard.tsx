@@ -35,6 +35,7 @@ const Card = styled.div`
   height: 280px;
   color: ${colors.White};
   border-radius: 10px;
+  overflow: hidden;
 
   .bgImg {
     width: 100%;
@@ -68,6 +69,19 @@ const Card = styled.div`
   }
   .startDate {
     ${typo.caption}
+  }
+
+  @media (max-width: 960px) {
+    width: calc((100% - 20px) / 2);
+    margin-bottom: 20px;
+  }
+  @media (max-width: 567px) {
+    width: 100%;
+    margin-bottom: 10px;
+
+    .textPart {
+      padding: 16px 24px;
+    }
   }
 `;
 export default CampCard;
