@@ -32,8 +32,8 @@ const Header = () => {
           <img
             src={
               downScroll
-                ? "/assets/image/icons/my-page-icon-black.png"
-                : "/assets/image/icons/my-page-icon.svg"
+                ? "https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/icons/my-page-icon-black.png?raw=true"
+                : "https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/icons/my-page-icon.svg?raw=true"
             }
             alt="마이페이지 이동"
           />

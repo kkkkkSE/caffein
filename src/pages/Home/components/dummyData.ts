@@ -9,7 +9,8 @@ export const campData: caffeinCamp[] = [
     status: "모집중",
     field: "IT",
     skill: "",
-    thumbnail: "/assets/image/pop-camp-1.png",
+    thumbnail:
+      "https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/pop-camp-1.png?raw=true",
   },
   {
     id: 1,
@@ -19,7 +20,8 @@ export const campData: caffeinCamp[] = [
     status: "모집중",
     field: "IT",
     skill: "",
-    thumbnail: "/assets/image/pop-camp-2.png",
+    thumbnail:
+      "https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/pop-camp-2.png?raw=true",
   },
   {
     id: 2,
@@ -29,7 +31,8 @@ export const campData: caffeinCamp[] = [
     status: "모집중",
     field: "IT",
     skill: "",
-    thumbnail: "/assets/image/pop-camp-3.png",
+    thumbnail:
+      "https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/pop-camp-3.png?raw=true",
   },
   {
     id: 3,
@@ -39,7 +42,8 @@ export const campData: caffeinCamp[] = [
     status: "모집중",
     field: "IT",
     skill: "",
-    thumbnail: "/assets/image/pop-camp-4.png",
+    thumbnail:
+      "https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/pop-camp-4.png?raw=true",
   },
   {
     id: 4,
@@ -49,7 +53,8 @@ export const campData: caffeinCamp[] = [
     status: "모집중",
     field: "IT",
     skill: "백엔드",
-    thumbnail: "/assets/image/sale-camp-1.png",
+    thumbnail:
+      "https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/sale-camp-1.png?raw=true",
   },
   {
     id: 5,
@@ -59,7 +64,8 @@ export const campData: caffeinCamp[] = [
     status: "모집중",
     field: "IT",
     skill: "SQL",
-    thumbnail: "/assets/image/sale-camp-2.png",
+    thumbnail:
+      "https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/sale-camp-2.png?raw=true",
   },
   {
     id: 6,
@@ -69,7 +75,8 @@ export const campData: caffeinCamp[] = [
     status: "모집중",
     field: "IT",
     skill: "인공지능",
-    thumbnail: "/assets/image/sale-camp-3.png",
+    thumbnail:
+      "https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/sale-camp-3.png?raw=true",
   },
   {
     id: 7,
@@ -79,7 +86,8 @@ export const campData: caffeinCamp[] = [
     status: "모집중",
     field: "IT",
     skill: "백엔드",
-    thumbnail: "/assets/image/sale-camp-4.png",
+    thumbnail:
+      "https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/sale-camp-4.png?raw=true",
   },
 ];
 

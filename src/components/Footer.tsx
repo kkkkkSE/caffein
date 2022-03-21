@@ -23,17 +23,20 @@ const Footer = () => {
         </div>
         <div className="snsBtnWrap">
           <div className="snsBtn">
-            <img src="/assets/image/icons/twitter-icon.svg" alt="공식 트위터" />
+            <img
+              src="https://raw.githubusercontent.com/kkkkkSE/caffein/5df4f3ed33d0dd2b1ea0b407be5ec509b72ecfe4/public/assets/image/icons/twitter-icon.svg"
+              alt="공식 트위터"
+            />
           </div>
           <div className="snsBtn">
             <img
-              src="/assets/image/icons/facebook-icon.svg"
+              src="https://raw.githubusercontent.com/kkkkkSE/caffein/5df4f3ed33d0dd2b1ea0b407be5ec509b72ecfe4/public/assets/image/icons/facebook-icon.svg"
               alt="공식 페이스북"
             />
           </div>
           <div className="snsBtn">
             <img
-              src="/assets/image/icons/instagram-icon.svg"
+              src="https://raw.githubusercontent.com/kkkkkSE/caffein/5df4f3ed33d0dd2b1ea0b407be5ec509b72ecfe4/public/assets/image/icons/instagram-icon.svg"
               alt="공식 인스타그램"
             />
           </div>

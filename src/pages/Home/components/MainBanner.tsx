@@ -28,7 +28,7 @@ const MainBanner = () => {
             <div
               className="bannerImage slide"
               style={{
-                backgroundImage: `url("/assets/image/banner-img1.png")`,
+                backgroundImage: `url("https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/banner-img1.png?raw=true")`,
               }}
             ></div>
           </SwiperSlide>
@@ -41,7 +41,7 @@ const MainBanner = () => {
             <div
               className="bannerImage slide"
               style={{
-                backgroundImage: `url("/assets/image/banner-img2.jpg")`,
+                backgroundImage: `url("https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/banner-img2.jpg?raw=true")`,
               }}
             ></div>
           </SwiperSlide>
@@ -54,7 +54,7 @@ const MainBanner = () => {
             <div
               className="bannerImage slide"
               style={{
-                backgroundImage: `url("/assets/image/banner-img3.jpg")`,
+                backgroundImage: `url("https://github.com/kkkkkSE/caffein/blob/master/public/assets/image/banner-img3.jpg?raw=true")`,
               }}
             ></div>
           </SwiperSlide>
