@@ -14,7 +14,7 @@ function App() {
     <>
       <GlobalStyle />
 
-      <Router>
+      <Router basename="/caffein">
         {/* <nav>
         <Link to="/">Home</Link>
         <Link to="/CampDetail">CampDetail</Link>
