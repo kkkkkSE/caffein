@@ -11,7 +11,7 @@ interface CampProps {
 
 const CampCard = ({ campData }: CampProps) => {
   return (
-    <Card>
+    <StyledCard>
       <div
         className="bgImg"
         style={{
@@ -26,11 +26,11 @@ const CampCard = ({ campData }: CampProps) => {
           </span>
         </div>
       </div>
-    </Card>
+    </StyledCard>
   );
 };
 
-const Card = styled.div`
+const StyledCard = styled.div`
   width: calc((100% - 60px) / 4);
   height: 280px;
   color: ${colors.White};

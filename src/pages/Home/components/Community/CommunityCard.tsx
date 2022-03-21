@@ -10,7 +10,7 @@ interface CommunityProps {
 
 const CommunityCard = ({ data }: CommunityProps) => {
   return (
-    <Card>
+    <StyledCard>
       <div className="communityCard">
         <div className="topPart">
           <span
@@ -50,11 +50,11 @@ const CommunityCard = ({ data }: CommunityProps) => {
           </a>
         </div>
       </div>
-    </Card>
+    </StyledCard>
   );
 };
 
-const Card = styled.div`
+const StyledCard = styled.div`
   width: calc((100% - 60px) / 4);
   height: 320px;
   padding: 16px;
