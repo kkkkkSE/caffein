@@ -61,8 +61,9 @@ const Container = styled.div`
   }
 
   @media (max-width: 567px) {
-  .campSection {
-    padding-bottom: 80px;
+    .campSection {
+      padding-bottom: 80px;
+    }
   }
 `;
 
