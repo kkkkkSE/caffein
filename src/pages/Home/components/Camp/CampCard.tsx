@@ -19,7 +19,11 @@ const CampCard = ({ campData }: CampProps) => {
         }}
       >
         <div className="textPart">
-          <span className="statusOrSkill">{campData.status}</span>
+          <span className="statusOrSkill">
+            {campData.type === "popular"
+              ? campData.status
+              : campData.field + "/" + campData.skill}
+          </span>
           <p className="campTitle">{campData.name}</p>
           <span className="startDate">
             {dayjs(campData.startDate).format("M월 D일 시작")}
