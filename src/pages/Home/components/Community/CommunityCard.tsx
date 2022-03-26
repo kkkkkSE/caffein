@@ -5,45 +5,48 @@ import colors from "../../../../styles/color";
 import { caffeinCommunity } from "../../../../types/type";
 
 interface CommunityProps {
-  data: caffeinCommunity;
+  communityData: caffeinCommunity;
 }
 
-const CommunityCard = ({ data }: CommunityProps) => {
+const selectTagColor = (tag) => {
+  return tag === "조회수 TOP"
+    ? "postTagPrimaryColor postTag"
+    : "postTagGrayColor postTag";
+};
+
+const CommunityCard = ({ communityData }: CommunityProps) => {
   return (
     <StyledCard>
       <div className="communityCard">
         <div className="topPart">
-          <span
-            className={`${
-              data.topPost ? "topViewPost postTag" : "topViewPost postTag hide"
-            }`}
-          >
-            조회수 TOP
-          </span>
-          <span className="postCategory postTag">{data.postCategory}</span>
-          <p className="postTitle">{data.title}</p>
-          <p className="postCont">{data.content}</p>
+          {communityData.tags.map((tag, index) => {
+            return (
+              <span key={index} className={selectTagColor(tag)}>
+                {tag}
+              </span>
+            );
+          })}
+          <p className="postTitle">{communityData.title}</p>
+          <p className="postCont">{communityData.content}</p>
         </div>
         <div className="bottomPart">
           <ul>
-            <li className="comment">
-              <div className="commentAvatar"></div>
-              <div className="commentTextPart">
-                <div className="commentNickname">
-                  {data.comments[0].nickname}
-                </div>
-                <div className="commentCont">{data.comments[0].content}</div>
-              </div>
-            </li>
-            <li className="comment">
-              <div className="commentAvatar"></div>
-              <div className="commentTextPart">
-                <div className="commentNickname">
-                  {data.comments[1].nickname}
-                </div>
-                <div className="commentCont">{data.comments[1].content}</div>
-              </div>
-            </li>
+            {communityData.comments.map((comment, index) => {
+              return (
+                <li key={index} className="comment">
+                  <div
+                    className="commentAvatar"
+                    style={{
+                      backgroundImage: `url(${comment.profile})`,
+                    }}
+                  ></div>
+                  <div className="commentTextPart">
+                    <div className="commentNickname">{comment.nickname}</div>
+                    <div className="commentCont">{comment.content}</div>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
           <a href="#" className="moreBtn">
             ＋더보기
@@ -78,25 +81,32 @@ const StyledCard = styled.div`
     border-radius: 4px;
     margin: 0 8px 8px 0;
   }
-  .postTag.hide {
-    display: none;
-  }
 
-  .topViewPost {
+  .postTagPrimaryColor {
     background-color: ${colors.Primary01};
     color: ${colors.White};
   }
-  .postCategory {
+  .postTagGrayColor {
     background-color: ${colors.Gray04};
   }
 
   .postTitle {
+    height: 36px;
     ${typo.Body1}
     font-weight: bold;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   .postCont {
     ${typo.Body2}
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   .bottomPart {
@@ -110,6 +120,7 @@ const StyledCard = styled.div`
   .comment {
     width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
   }
@@ -118,9 +129,11 @@ const StyledCard = styled.div`
     height: 30px;
     background-color: ${colors.Gray05};
     border-radius: 50%;
-    margin-right: 8px;
   }
 
+  .commentTextPart {
+    width: calc(100% - 40px);
+  }
   .commentNickname {
     ${typo.Body2}
     font-weight: bold;
@@ -128,6 +141,11 @@ const StyledCard = styled.div`
   }
   .commentCont {
     ${typo.caption}
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   .moreBtn {
