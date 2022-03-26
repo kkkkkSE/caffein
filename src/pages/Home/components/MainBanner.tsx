@@ -79,11 +79,11 @@ const StyledSwiper = styled(Swiper)`
     top: 100%;
   }
   .swiper-button-prev {
-    background-image: url("/assets/image/icons/left-btn.svg");
+    background-image: url("https://raw.githubusercontent.com/kkkkkSE/caffein/c9e67df0e56284dce459c575254b8d7811a1a194/public/assets/image/icons/left-btn.svg");
     left: 270px;
   }
   .swiper-button-next {
-    background-image: url("/assets/image/icons/right-btn.svg");
+    background-image: url("https://raw.githubusercontent.com/kkkkkSE/caffein/c9e67df0e56284dce459c575254b8d7811a1a194/public/assets/image/icons/right-btn.svg");
     left: 305px;
   }
 
