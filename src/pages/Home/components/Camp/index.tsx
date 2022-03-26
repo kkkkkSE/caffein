@@ -2,12 +2,12 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { maxWidth } from "../../../../styles/mixin";
-import typo from "../../../../styles/typo";
+import { maxWidth } from "styles/mixin";
+import typo from "styles/typo";
 import Card from "./CampCard";
 
-import { caffeinCamp } from "../../../../types/type";
-import { campData } from "../dummyData";
+import { caffeinCamp } from "types/type";
+import { getCampsByType } from "apis/campApis";
 
 const CampSection = () => {
   const [popCamp, setPopCamp] = useState<caffeinCamp[]>([]);
