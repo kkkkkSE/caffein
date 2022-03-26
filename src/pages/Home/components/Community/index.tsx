@@ -7,19 +7,18 @@ import { maxWidth } from "../../../../styles/mixin";
 import CommunityCard from "./CommunityCard";
 
 import { caffeinCommunity } from "../../../../types/type";
-import { communityData } from "../dummyData";
+import { getCommunities } from "apis/campApis";
 
 const Community = () => {
   const [community, setCommunity] = useState<caffeinCommunity[]>([]);
 
   useEffect(() => {
-    setCommunity([
-      communityData[0],
-      communityData[1],
-      communityData[2],
-      communityData[3],
-    ]);
+    fetchCommunities();
   }, []);
+
+  const fetchCommunities = async () => {
+    setCommunity(await getCommunities());
+  };
 
   const isTabletScreen = useMediaQuery({ query: "(max-width: 960px)" });
 
