@@ -26,12 +26,11 @@ const Community = () => {
     <Container>
       <div className="communitySection">
         {community.map((communityData, index) => {
-          if (index === community.length - 1 && isTabletScreen) {
-            console.log(index, community.length);
-            return;
-          } else {
-            return <CommunityCard key={index} data={communityData} />;
-          }
+          return index < 3 || !isTabletScreen ? (
+            <CommunityCard key={index} communityData={communityData} />
+          ) : (
+            <></>
+          );
         })}
       </div>
     </Container>
