@@ -1,7 +1,7 @@
 export interface caffeinCamp {
   id: number;
   name: string;
-  category: "pop" | "sale";
+  type: "popular" | "sale";
   startDate: string;
   status: string;
   field: string;
@@ -11,15 +11,14 @@ export interface caffeinCamp {
 
 export interface caffeinCommunity {
   id: number;
-  topPost: boolean;
-  postCategory: string;
+  tags: string[];
   title: string;
   content: string;
   comments: caffeinComment[];
 }
 
 export interface caffeinComment {
-  profileImg: string;
+  profile: string;
   nickname: string;
   content: string;
 }
