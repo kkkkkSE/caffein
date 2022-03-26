@@ -14,9 +14,18 @@ const CampSection = () => {
   const [saleCamp, setSaleCamp] = useState<caffeinCamp[]>([]);
 
   useEffect(() => {
-    setPopCamp([campData[0], campData[1], campData[2], campData[3]]);
-    setSaleCamp([campData[4], campData[5], campData[6], campData[7]]);
+    fetchCamps("popular");
+    fetchCamps("sale");
   }, []);
+
+  const fetchCamps = async (type: string) => {
+    const camps = await getCampsByType(type);
+    if (type === "popular") {
+      setPopCamp(camps);
+    } else if (type === "sale") {
+      setSaleCamp(camps);
+    }
+  };
 
   return (
     <Container>
