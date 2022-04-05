@@ -16,7 +16,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "noImplicitAny": false,
-    "baseUrl": "src" // 상대경로 지정하는 부분, src에서부터 경로를 시작
+    "baseUrl": "src/" // 상대경로 지정하는 부분, src에서부터 경로를 시작
   },
   "include": ["src"]
 }
