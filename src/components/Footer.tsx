@@ -1,8 +1,8 @@
 // eslint-disable-next-line
 import styled from "styled-components";
-import { maxWidth } from "../styles/mixin";
-import colors from "../styles/color";
-import typo from "../styles/typo";
+import { maxWidth } from "styles/mixin";
+import colors from "styles/color";
+import typo from "styles/typo";
 
 const Footer = () => {
   return (

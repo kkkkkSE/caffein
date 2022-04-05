@@ -1,13 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "reset-css";
-import GlobalStyle from "./styles/global";
+import GlobalStyle from "styles/global";
 
-import Home from "./pages/Home";
-import CampDetail from "./pages/CampDetail";
-import CampApply from "./pages/CampApply";
-import Community from "./pages/Community";
+import Home from "pages/Home";
+import CampDetail from "pages/CampDetail";
+import CampApply from "pages/CampApply";
+import Community from "pages/Community";
 
 function App() {
   return (

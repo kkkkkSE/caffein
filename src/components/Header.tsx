@@ -1,9 +1,9 @@
 // eslint-disable-next-line
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { maxWidth } from "../styles/mixin";
-import colors from "../styles/color";
-import typo from "../styles/typo";
+import { maxWidth } from "styles/mixin";
+import colors from "styles/color";
+import typo from "styles/typo";
 
 const Header = () => {
   const [downScroll, setDownScroll] = useState<boolean>(false);
