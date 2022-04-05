@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/caffein/static/css/main.154cd3e3.css",
+    "main.js": "/caffein/static/js/main.767cfede.js",
+    "index.html": "/caffein/index.html",
+    "main.154cd3e3.css.map": "/caffein/static/css/main.154cd3e3.css.map",
+    "main.767cfede.js.map": "/caffein/static/js/main.767cfede.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.154cd3e3.css",
+    "static/js/main.767cfede.js"
+  ]
+}
