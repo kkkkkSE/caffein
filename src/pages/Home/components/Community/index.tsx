@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import styled from "styled-components";
-import { maxWidth } from "../../../../styles/mixin";
+import { maxWidth } from "styles/mixin";
 import CommunityCard from "./CommunityCard";
 
-import { caffeinCommunity } from "../../../../types/type";
+import { caffeinCommunity } from "types/type";
 import { getCommunities } from "apis/campApis";
 
 const Community = () => {

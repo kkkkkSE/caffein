@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { maxWidth } from "../../../styles/mixin";
-import colors from "../../../styles/color";
-import typo from "../../../styles/typo";
+import { maxWidth } from "styles/mixin";
+import colors from "styles/color";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
