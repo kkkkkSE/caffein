@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import typo from "../../../../styles/typo";
-import colors from "../../../../styles/color";
+import typo from "styles/typo";
+import colors from "styles/color";
 
-import { caffeinCommunity } from "../../../../types/type";
+import { caffeinCommunity } from "types/type";
 
 interface CommunityProps {
   communityData: caffeinCommunity;

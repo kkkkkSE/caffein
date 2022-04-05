@@ -1,9 +1,9 @@
 import dayjs from "dayjs";
 import styled from "styled-components";
-import typo from "../../../../styles/typo";
-import colors from "../../../../styles/color";
+import typo from "styles/typo";
+import colors from "styles/color";
 
-import { caffeinCamp } from "../../../../types/type";
+import { caffeinCamp } from "types/type";
 
 interface CampProps {
   campData: caffeinCamp;
